@@ -23,10 +23,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -47,4 +43,22 @@ img {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.feedback-form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 24px;
+}
+button{
+  width: 80px;
+  background-color: cornflowerblue;
+  border: 1px black solid;
+  border-radius: 4px;
+  cursor: pointer;
 }
