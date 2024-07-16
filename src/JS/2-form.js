@@ -1,3 +1,6 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 let formData = {};
 const formRef = document.querySelector('.feedback-form');
 const localStorageKey = 'feedback-form-state';
@@ -16,7 +19,11 @@ function onSubmit(ev) {
   };
 
   if (e === '' || m === '') {
-    return alert('Please, fill in all fields!');
+    return iziToast.error({
+      title: '',
+      message: 'Please fill in all fields',
+      position: 'bottomLeft',
+    });
   }
   console.log(formData);
   ev.target.reset();
